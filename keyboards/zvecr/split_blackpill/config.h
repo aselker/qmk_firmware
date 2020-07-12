@@ -51,7 +51,6 @@
 #define MATRIX_COL_PINS { A10, A15, B3, B4, B5, B8 }
 #define MATRIX_ROW_PINS { B12, B13, B14, B15, A8, A9 }
 
-/* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
 #define MATRIX_IO_DELAY 5
@@ -60,7 +59,7 @@
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
  */
 //#define SPLIT_HAND_PIN B3
-#define MASTER_RIGHT // Hard-code to right half
+#define MASTER_RIGHT // Hard-code the handedness
 #define SOFT_SERIAL_PIN B6
 #define SELECT_SOFT_SERIAL_SPEED 0
 
