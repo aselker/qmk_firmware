@@ -48,8 +48,10 @@
 #define MATRIX_ROW_PINS_RIGHT { B0, B1, B10, B11 }
 */
 
-#define MATRIX_COL_PINS { A10, A15, B3, B4, B5, B8 }
+#define MATRIX_COL_PINS { B8, B5, B4, B3, A15, A10 }
 #define MATRIX_ROW_PINS { B12, B13, B14, B15, A8, A9 }
+#define MATRIX_COL_PINS_RIGHT { A10, A15, B3, B4, B5, B8 }
+#define MATRIX_ROW_PINS_RIGHT { B12, B13, B14, B15, A8, A9 }
 
 #define DIODE_DIRECTION COL2ROW
 
@@ -62,11 +64,11 @@
 //#define MASTER_RIGHT // Hard-code the handedness
 //
 #define SOFT_SERIAL_PIN B6
-#define SERIAL_USART_DRIVER SD1 // USART driver of TX pin. default: SD1
-#define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
+//#define SERIAL_USART_DRIVER SD1 // USART driver of TX pin. default: SD1
+//#define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
 
 #define SELECT_SOFT_SERIAL_SPEED 1
-#define SPLIT_USB_DETECT
+//#define SPLIT_USB_DETECT
 
 #define RGB_DI_PIN B4
 #define RGBLED_NUM 24
