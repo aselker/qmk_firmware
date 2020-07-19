@@ -58,20 +58,27 @@
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
  */
-//#define SPLIT_HAND_PIN B3
-#define MASTER_RIGHT // Hard-code the handedness
+#define SPLIT_HAND_PIN B11 // High is left, low is right
+//#define MASTER_RIGHT // Hard-code the handedness
+//
 #define SOFT_SERIAL_PIN B6
-#define SELECT_SOFT_SERIAL_SPEED 0
+#define SERIAL_USART_DRIVER SD1 // USART driver of TX pin. default: SD1
+#define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
+
+#define SELECT_SOFT_SERIAL_SPEED 1
+#define SPLIT_USB_DETECT
 
 #define RGB_DI_PIN B4
 #define RGBLED_NUM 24
 #define RGBLED_SPLIT { 12, 12 }
 #define RGBLIGHT_ANIMATIONS
 
+/*
 #define WS2812_PWM_DRIVER PWMD3
 #define WS2812_PWM_CHANNEL 1
 #define WS2812_DMA_STREAM STM32_DMA1_STREAM3
 #define WS2812_DMA_CHANNEL 3
+*/
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5

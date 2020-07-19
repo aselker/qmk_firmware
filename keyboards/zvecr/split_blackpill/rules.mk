@@ -31,7 +31,7 @@ FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 
 SPLIT_KEYBOARD = yes
 SERIAL_DRIVER = usart
-WS2812_DRIVER = pwm
+#WS2812_DRIVER = pwm
 OPT_DEFS += -DSTM32_DMA_REQUIRED=TRUE
 
 LAYOUTS = 5x6
