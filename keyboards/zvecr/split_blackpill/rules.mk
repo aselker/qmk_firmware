@@ -22,13 +22,10 @@ COMMAND_ENABLE = no         # Commands for debug and configuration
 SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 # if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 NKRO_ENABLE = yes           # USB Nkey Rollover
-BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
-#RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
-MIDI_ENABLE = no            # MIDI support
-BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
-AUDIO_ENABLE = no           # Audio output
-FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 SWAP_HANDS_ENABLE = yes     # Use keycode ACTION_SWAP_HANDS to swap
+
+BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality -- causes performance issues
+BACKLIGHT_DRIVER = software  # Fake PWM bc the LED pin doesn't support it
 
 SPLIT_KEYBOARD = yes
 SERIAL_DRIVER = usart

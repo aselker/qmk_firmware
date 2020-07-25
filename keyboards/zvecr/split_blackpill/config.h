@@ -70,17 +70,6 @@
 #define SELECT_SOFT_SERIAL_SPEED 1
 //#define SPLIT_USB_DETECT
 
-#define RGB_DI_PIN B4
-#define RGBLED_NUM 24
-#define RGBLED_SPLIT { 12, 12 }
-#define RGBLIGHT_ANIMATIONS
-
-/*
-#define WS2812_PWM_DRIVER PWMD3
-#define WS2812_PWM_CHANNEL 1
-#define WS2812_DMA_STREAM STM32_DMA1_STREAM3
-#define WS2812_DMA_CHANNEL 3
-*/
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -89,6 +78,14 @@
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+
+
+// "Backlight" (fn light) stuff
+#ifdef BACKLIGHT_ENABLE
+#define BACKLIGHT_PIN C13
+#define BACKLIGHT_LEVELS 1 // PC13 can't do PWM, so we do it in software
+#define BACKLIGHT_ON_STATE 0 // Low is on
+#endif // BACKLIGHT_ENABLE
 
 /* If defined, GRAVE_ESC will always act as ESC when CTRL is held.
  * This is userful for the Windows task manager shortcut (ctrl+shift+esc).

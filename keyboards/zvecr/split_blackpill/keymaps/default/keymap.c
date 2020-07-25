@@ -23,3 +23,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {{5, 4}, {4, 4}, {3, 4}, {2, 4}, {1, 4}, {0, 4}},
   {{5, 5}, {4, 5}, {3, 5}, {2, 5}, {1, 5}, {0, 5}},
 };
+
+
+#ifdef BACKLIGHT_ENABLE
+// Turn the PC13 LED on when we're on a function layer.  We're pretending it's
+// a backlight.
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+      case 0:
+        backlight_disable();
+        break;
+      case 1:
+      case 2:
+        backlight_enable();
+        break;
+    }
+    return state;
+}
+#endif // BACKLIGHT_ENABLE
