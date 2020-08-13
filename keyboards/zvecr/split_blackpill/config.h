@@ -67,7 +67,7 @@
 //#define SERIAL_USART_DRIVER SD1 // USART driver of TX pin. default: SD1
 //#define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
 
-#define SELECT_SOFT_SERIAL_SPEED 1
+#define SELECT_SOFT_SERIAL_SPEED 0
 //#define SPLIT_USB_DETECT
 
 
