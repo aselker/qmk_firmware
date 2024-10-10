@@ -47,20 +47,10 @@
 #define MATRIX_ROW_PINS_RIGHT { B0, B1, B10, B11 }
 */
 
-/*
- * For my keyboard.  Adding a friend's temporarily.
 #define MATRIX_COL_PINS { B8, B5, B4, B3, A15, A10 }
 #define MATRIX_ROW_PINS { B12, B13, B14, B15, A8, A9 }
 #define MATRIX_COL_PINS_RIGHT { A10, A15, B3, B4, B5, B8 }
 #define MATRIX_ROW_PINS_RIGHT { B12, B13, B14, B15, A8, A9 }
-*/
-
-// Other kb
-#define MATRIX_COL_PINS {B3, A15, B15, A8, A10, A9 }
-#define MATRIX_ROW_PINS { B4, B5, A0, B7, B8, B9 }
-#define MATRIX_COL_PINS_RIGHT { B10, B1, B0, A7, A6, A5 }
-#define MATRIX_ROW_PINS_RIGHT { A4, A3, A2, A1, A0, C15 }
-
 
 #define DIODE_DIRECTION COL2ROW
 
